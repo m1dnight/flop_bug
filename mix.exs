@@ -14,7 +14,7 @@ defmodule FlopTest.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger],
+      extra_applications: [:logger, :mariaex],
       mod: {FlopTest.Application, []}
     ]
   end
@@ -23,8 +23,9 @@ defmodule FlopTest.MixProject do
   defp deps do
     [
       {:ecto_sql, "~> 3.0"},
-      {:postgrex, ">= 0.0.0"},
-      {:flop, "~> 0.20.0"}
+      {:myxql, "~> 0.6.0"},
+      {:mariaex, "~> 0.6.1", override: true},
+      {:flop, "~> 0.20.0"},
     ]
   end
 end

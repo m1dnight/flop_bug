@@ -5,8 +5,7 @@ defmodule FlopTest.Pet do
     Flop.Schema,
     filterable: [:name, :species],
     sortable: [:name, :age],
-    pagination_types: [:first, :last],
-    default_pagination_type: :first
+    pagination_types: [:first, :last]
   }
 
   schema "pets" do
