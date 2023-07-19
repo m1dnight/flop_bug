@@ -7,7 +7,7 @@ defmodule FlopTest.Repo.Migrations.Pet do
       add :age,    :integer
       add :species,    :string
 
-      timestamps()
+      timestamps(default: fragment("NOW()"))
     end
   end
 end

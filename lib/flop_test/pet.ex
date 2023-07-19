@@ -4,7 +4,7 @@ defmodule FlopTest.Pet do
   @derive {
     Flop.Schema,
     filterable: [:name, :species],
-    sortable: [:name, :age],
+    sortable: [:name, :age, :is_good],
     pagination_types: [:first, :last]
   }
 
@@ -12,5 +12,6 @@ defmodule FlopTest.Pet do
     field(:name, :string)
     field(:age, :integer)
     field(:species, :string)
+    field(:is_good, :boolean)
   end
 end
